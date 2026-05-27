@@ -5,9 +5,9 @@ let globalCount = 0; // Global scope - accessible everywhere
 // 2. Local Scope Demonstration
 // TODO: Create a function that demonstrates local scope.
 function demonstrateLocalScope() {
-  let localCount = 10; // Local scope - only exists inside this function
-  console.log("Inside function - localCount:", localCount); // Works: 10
-  console.log("Inside function - globalCount:", globalCount); // Works: 0 (accessible)
+  let localCount = 10;
+  console.log("Inside function - localCount:", localCount);
+  console.log("Inside function - globalCount:", globalCount); 
   return localCount;
 }
 
@@ -19,7 +19,7 @@ function modifyBothVariables() {
   console.log("Modified globalCount to:", globalCount);
 
   // Try to create a local variable with the same name (shadowing)
-  let globalCount = 100; // This creates a NEW local variable, doesn't affect global!
+  let globalCount = 100;
   console.log("Local shadow globalCount:", globalCount);
 
   // Local variable
@@ -83,7 +83,7 @@ const school = {
       budget: 30000,
     },
   },
-  students: [student1, student2, student3], // Can include constructor instances!
+  students: [student1, student2, student3],
   getTotalBudget: function () {
     return this.departments.science.budget + this.departments.arts.budget;
   },
